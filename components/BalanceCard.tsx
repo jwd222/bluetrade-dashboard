@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { list } from '@/lib/data'
+import TinyLineChart from './TinyLineChart'
 
 type BalanceCardProps = (typeof list)[number]
 
@@ -28,7 +29,7 @@ const BalanceCard = ({
       </CardHeader>
       <CardContent className="flex flex-row text-xl font-bold justify-between">
         <p>{content}</p>
-        <p>graphs</p>
+        <TinyLineChart />
       </CardContent>
       <CardFooter
         className="text-xs flex flex-row
