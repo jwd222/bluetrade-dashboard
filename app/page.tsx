@@ -5,7 +5,7 @@ import Market from '@/components/Market'
 
 export default function Home() {
   return (
-    <div className="bg-gray-200 min-h-screen w-full">
+    <div className="bg-gray-100 min-h-screen w-full">
       <Header />
       <Cards />
       <div
