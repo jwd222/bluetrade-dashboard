@@ -26,8 +26,9 @@ const BalanceCard = ({
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <CardContent className="text-xl font-bold">
+      <CardContent className="flex flex-row text-xl font-bold justify-between">
         <p>{content}</p>
+        <p>graphs</p>
       </CardContent>
       <CardFooter
         className="text-xs flex flex-row
