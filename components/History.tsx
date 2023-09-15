@@ -1,4 +1,5 @@
 import { Table, TableBody, TableCell, TableRow } from '@/components/ui/table'
+import { Button } from './ui/button'
 
 const invoices = [
   {
@@ -43,8 +44,19 @@ const History = () => {
   return (
     <div
       className="rounded-lg flex flex-col shadow basis-2/4
-    dark:text-white dark:bg-gray-900 bg-white"
+    dark:text-white dark:bg-gray-900 bg-white p-8"
     >
+      <div className="flex flex-row justify-between w-full">
+        <h1 className="text-lg dark:text-white justify-start">Assets</h1>
+        <Button
+          className="dark:bg-gray-950 dark:text-white/30 text-xs 
+          text-black/30 border border-black/10 scale-75"
+          type="button"
+          variant="ghost"
+        >
+          View all
+        </Button>
+      </div>
       <Table>
         <TableBody>
           {invoices.map((invoice) => (
