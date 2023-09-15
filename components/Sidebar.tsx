@@ -2,7 +2,6 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { DashboardIcon } from '@radix-ui/react-icons'
 import { Button, buttonVariants } from '@/components/ui/button'
 import Image from 'next/image'
 import Logo from '@/public/Logo.png'
@@ -25,16 +24,17 @@ const Sidebar = () => {
           src={theme === 'light' ? Logo : LogoDark}
           alt="Logo"
         />
-        {sideBarButtons.map((item, index) => (
+        {sideBarButtons.map(({ title, icon }, index) => (
           <React.Fragment key={index}>
             <Link
               href={'/'}
               className={`${buttonVariants({
                 variant: 'outline',
               })} w-[80%] hover:bg-blue-100 hover:text-blue-600 
-              dark:shadow-white/5 dark:hover:bg-blue-100/10`}
+              dark:shadow-white/5 dark:hover:bg-blue-100/10 gap-4`}
             >
-              <DashboardIcon className="mr-2 h-4" /> {item}
+              {icon}
+              {title}
             </Link>
           </React.Fragment>
         ))}

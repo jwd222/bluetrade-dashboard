@@ -3,6 +3,10 @@ import { BiSolidWallet } from 'react-icons/bi'
 import { BsCurrencyBitcoin, BsCoin } from 'react-icons/bs'
 import { FaEthereum } from 'react-icons/fa'
 import TinyLineChart from '@/components/TinyLineChart'
+import { RxDashboard } from 'react-icons/rx'
+import { RiArrowUpDownLine } from 'react-icons/ri'
+import { GoArrowSwitch, GoPerson } from 'react-icons/go'
+import { IoIosSettings } from 'react-icons/io'
 
 export const topCardList = [
   {
@@ -48,9 +52,24 @@ export const topCardList = [
 ] as const
 
 export const sideBarButtons = [
-  'Dashboard',
-  'Markets',
-  'Transactions',
-  'Profile',
-  'Settings',
+  {
+    title: 'Dashboard',
+    icon: React.createElement(RxDashboard),
+  },
+  {
+    title: 'Markets',
+    icon: React.createElement(RiArrowUpDownLine),
+  },
+  {
+    title: 'Transactions',
+    icon: React.createElement(GoArrowSwitch),
+  },
+  {
+    title: 'Profile',
+    icon: React.createElement(GoPerson),
+  },
+  {
+    title: 'Settings',
+    icon: React.createElement(IoIosSettings),
+  },
 ] as const
