@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { LineChart, Line } from 'recharts'
+import { LineChart, Line, ResponsiveContainer } from 'recharts'
 
 const data = [
   {
@@ -50,15 +50,17 @@ const data = [
 
 const TinyLineChart = () => {
   return (
-    <LineChart width={150} height={50} data={data}>
-      <Line
-        type="basis"
-        dataKey="pv"
-        stroke="#8884d8"
-        strokeWidth={2}
-        dot={false}
-      />
-    </LineChart>
+    <ResponsiveContainer width="100%" height={50} className="sm:">
+      <LineChart width={150} height={50} data={data}>
+        <Line
+          type="basis"
+          dataKey="pv"
+          stroke="#8884d8"
+          strokeWidth={2}
+          dot={false}
+        />
+      </LineChart>
+    </ResponsiveContainer>
   )
 }
 export default TinyLineChart

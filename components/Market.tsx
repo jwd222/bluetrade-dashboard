@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 
 const Market = () => {
   return (
-    <div className="col-span-1 bg-white rounded-lg flex flex-col">
+    <div className="bg-white rounded-lg flex flex-col border shadow basis-1/3">
       <h2 className="p-2">Market</h2>
       <ScrollArea className="h-60 rounded-md border">
         <div className="p-4">

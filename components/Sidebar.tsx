@@ -1,34 +1,32 @@
+import React from 'react'
 import Link from 'next/link'
-import {
-  DashboardIcon,
-  MixerVerticalIcon,
-  PersonIcon,
-} from '@radix-ui/react-icons'
-import { RiSettings5Fill } from 'react-icons/ri'
-import { GrTransaction } from 'react-icons/gr'
+import { DashboardIcon } from '@radix-ui/react-icons'
 import { Button, buttonVariants } from '@/components/ui/button'
+import Image from 'next/image'
+import Logo from '@/public/Logo.png'
+import { Separator } from './ui/separator'
+import { sideBarButtons } from '@/lib/data'
 
 const Sidebar = () => {
   return (
-    <div className="h-screen p-4 bg-white">
+    <div className="h-screen p-4 bg-white sm:w-1/6 hidden sm:block">
       <div className="flex flex-col items-center gap-10">
-        <h2 className="p-5 py-10">BlueTrade</h2>
-        <Link href={'/'} className={buttonVariants({ variant: 'outline' })}>
-          <DashboardIcon className="mr-2 h-4" /> Dashboard
-        </Link>
-        <Link href={'/'} className={buttonVariants({ variant: 'outline' })}>
-          <MixerVerticalIcon className="mr-2 h-4" /> Markets
-        </Link>
-        <Link href={'/'} className={buttonVariants({ variant: 'outline' })}>
-          <GrTransaction className="mr-2 h-4" /> Transactions
-        </Link>
-        <Link href={'/'} className={buttonVariants({ variant: 'outline' })}>
-          <PersonIcon className="mr-2 h-4" /> Profile
-        </Link>
-        <Link href={'/'} className={buttonVariants({ variant: 'outline' })}>
-          <RiSettings5Fill className="mr-2 h-4" /> Settings
-        </Link>
+        <Image className="mt-10" src={Logo} alt="Logo" />
+        {sideBarButtons.map((item, index) => (
+          <React.Fragment key={index}>
+            <Link
+              href={'/'}
+              className={`${buttonVariants({
+                variant: 'outline',
+              })} w-[80%] hover:bg-blue-100 hover:text-blue-600`}
+            >
+              <DashboardIcon className="mr-2 h-4" /> {item}
+            </Link>
+          </React.Fragment>
+        ))}
+        <Separator />
       </div>
+      {}
     </div>
   )
 }

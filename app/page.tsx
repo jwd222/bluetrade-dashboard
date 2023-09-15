@@ -5,13 +5,10 @@ import Market from '@/components/Market'
 
 export default function Home() {
   return (
-    <div className="bg-gray-100 min-h-screen w-full">
+    <div className="flex flex-col bg-gray-50 min-h-screen w-full p-2">
       <Header />
       <Cards />
-      <div
-        className="p-4 grid lg:grid-cols-3 grid-cols-1 gap-4
-       w-full"
-      >
+      <div className="p-2 flex sm:flex-row flex-col gap-2">
         <Chart />
         <Market />
       </div>
