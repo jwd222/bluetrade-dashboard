@@ -4,7 +4,7 @@ import { BsCurrencyBitcoin, BsCoin } from 'react-icons/bs'
 import { FaEthereum } from 'react-icons/fa'
 import TinyLineChart from '@/components/TinyLineChart'
 
-export const list = [
+export const topCardList = [
   {
     title: 'Estimated Balance',
     description: '',
@@ -45,4 +45,12 @@ export const list = [
     units: 556.14,
     rate: 64.11,
   },
+] as const
+
+export const sideBarButtons = [
+  'Dashboard',
+  'Markets',
+  'Transactions',
+  'Profile',
+  'Settings',
 ] as const

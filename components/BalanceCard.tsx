@@ -6,9 +6,9 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { list } from '@/lib/data'
+import { topCardList } from '@/lib/data'
 
-type BalanceCardProps = (typeof list)[number]
+type BalanceCardProps = (typeof topCardList)[number]
 
 const BalanceCard = ({
   title,
@@ -21,7 +21,7 @@ const BalanceCard = ({
   units,
 }: BalanceCardProps) => {
   return (
-    <Card className="lg:col-span-2 sm:col-span-1 w-full h-full ">
+    <Card className="flex-1">
       <CardHeader className="flex flex-row justify-start gap-2">
         {icon}
         <CardTitle>{title}</CardTitle>
