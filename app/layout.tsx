@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} flex flex-row dark:bg-black bg-gray-100`}
+        className={`${inter.className} flex flex-row dark:bg-black bg-gray-100 w-full`}
       >
         <ThemeContextProvider>
           <Sidebar />
