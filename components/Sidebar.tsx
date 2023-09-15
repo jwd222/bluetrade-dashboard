@@ -31,13 +31,14 @@ const Sidebar = () => {
               href={'/'}
               className={`${buttonVariants({
                 variant: 'outline',
-              })} w-[80%] hover:bg-blue-100 hover:text-blue-600`}
+              })} w-[80%] hover:bg-blue-100 hover:text-blue-600 
+              dark:shadow-white/5 dark:hover:bg-blue-100/10`}
             >
               <DashboardIcon className="mr-2 h-4" /> {item}
             </Link>
           </React.Fragment>
         ))}
-        <Separator />
+        <Separator className="border border-black/10 dark:border-white/10" />
       </div>
       {}
     </div>
