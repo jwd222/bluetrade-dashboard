@@ -1,6 +1,5 @@
 'use client'
 
-import { faker } from '@faker-js/faker'
 import {
   PieChart,
   Pie,
@@ -70,6 +69,7 @@ const Asset = () => {
           </Pie>
         </PieChart>
       </ResponsiveContainer>
+      <div></div>
     </div>
   )
 }

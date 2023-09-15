@@ -47,7 +47,7 @@ const History = () => {
     dark:text-white dark:bg-gray-900 bg-white p-8"
     >
       <div className="flex flex-row justify-between w-full">
-        <h1 className="text-lg dark:text-white justify-start">Assets</h1>
+        <h1 className="text-lg dark:text-white justify-start">History</h1>
         <Button
           className="dark:bg-gray-950 dark:text-white/30 text-xs 
           text-black/30 border border-black/10 scale-75"

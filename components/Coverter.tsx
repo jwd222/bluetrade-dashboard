@@ -37,7 +37,7 @@ const Converter = () => {
         <Button type="button">Subscribe</Button>
       </div>
       <Button className="w-full ">Convert now</Button>
-      <p className=" p-0 text-xs">
+      <p className=" p-0 text-xs dark:text-white">
         The ultimate price and output is determined by the amount of tokens in
         the pool at the time of your swap.
       </p>
