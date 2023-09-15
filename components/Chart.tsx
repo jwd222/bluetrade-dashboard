@@ -1,64 +1,82 @@
 'use client'
 
+import { faker } from '@faker-js/faker'
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
   Tooltip,
   Legend,
-} from 'chart.js'
-import { Line } from 'react-chartjs-2'
-import { faker } from '@faker-js/faker'
+  ResponsiveContainer,
+} from 'recharts'
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-)
-
-export const options = {
-  responsive: true,
-  maintainAspectRatio: false,
-  plugins: {},
-}
-
-const labels = [
-  'Jul 18',
-  'Jul 19',
-  'Jul 20',
-  'Jul 21',
-  'Jul 22',
-  'Jul 23',
-  'Jul 24',
-  'Jul 25',
-  'Jul 26',
-  'Jul 27',
+const data = [
+  {
+    name: 'Page A',
+    uv: 4000,
+    pv: 2400,
+    amt: 2400,
+  },
+  {
+    name: 'Page B',
+    uv: 3000,
+    pv: 1398,
+    amt: 2210,
+  },
+  {
+    name: 'Page C',
+    uv: 2000,
+    pv: 9800,
+    amt: 2290,
+  },
+  {
+    name: 'Page D',
+    uv: 2780,
+    pv: 3908,
+    amt: 2000,
+  },
+  {
+    name: 'Page E',
+    uv: 1890,
+    pv: 4800,
+    amt: 2181,
+  },
+  {
+    name: 'Page F',
+    uv: 2390,
+    pv: 3800,
+    amt: 2500,
+  },
 ]
-
-export const data = {
-  labels,
-  datasets: [
-    {
-      data: labels.map(() => faker.datatype.number({ min: 19000, max: 23000 })),
-      borderColor: 'rgb(9, 120, 224)',
-    },
-  ],
-}
 
 const Chart = () => {
   return (
-    <div
-      className="lg:col-span-2 col-span-1 bg-white rounded-lg 
-    p-2"
-    >
-      <Line options={options} data={data} className="max-h-1/2" />
+    <div className="lg:col-span-2 col-span-1 bg-white rounded-lg p-2 w-full">
+      <ResponsiveContainer width="100%" height="100%">
+        <LineChart
+          id="chart"
+          data={data}
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Line
+            type="monotone"
+            dataKey="uv"
+            stroke="#8884d8"
+            activeDot={{ r: 8 }}
+          />
+        </LineChart>
+      </ResponsiveContainer>
     </div>
   )
 }
