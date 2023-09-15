@@ -1,6 +1,13 @@
 import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { BiDotsHorizontalRounded } from 'react-icons/bi'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 
 const Converter = () => {
   return (
@@ -20,12 +27,17 @@ const Converter = () => {
         </Button>
       </div>
       <div className="flex w-full max-w-sm items-center space-x-2">
-        <Input
-          className="dark:bg-black border-white/10"
-          type="text"
-          placeholder=""
-        />
-        <Button type="button">Subscribe</Button>
+        <Input className="dark:bg-black border-white/10" type="text" />
+        <Select>
+          <SelectTrigger className="w-[180px]">
+            <SelectValue placeholder="Currency" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="USDT">USDT</SelectItem>
+            <SelectItem value="BDT">BDT</SelectItem>
+            <SelectItem value="BTC">BTC</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
       <div className="flex w-full max-w-sm items-center space-x-2">
         <Input
