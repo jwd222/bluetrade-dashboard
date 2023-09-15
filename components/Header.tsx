@@ -9,7 +9,6 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover'
 import { IoMdNotificationsOutline } from 'react-icons/io'
-import { Button } from './ui/button'
 
 const Header = () => {
   return (

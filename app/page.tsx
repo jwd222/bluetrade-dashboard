@@ -8,7 +8,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen w-full">
       <Header />
       <Cards />
-      <div className="p-2 flex sm:flex-row flex-col gap-2 ml-2 ">
+      <div className="p-4 flex sm:flex-row flex-col gap-2 ml-2 ">
         <Chart />
         <Market />
       </div>
