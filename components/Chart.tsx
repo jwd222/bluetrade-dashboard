@@ -11,6 +11,21 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from '@/components/ui/card'
+import { sideBarButtons } from '@/lib/data'
+import { SelectItemText } from '@radix-ui/react-select'
 
 const data = [
   {
@@ -51,12 +66,28 @@ const data = [
   },
 ]
 
+const { title, icon } = sideBarButtons[0]
+
 const Chart = () => {
   return (
     <div
       className="rounded-lg pt-5  w-full shadow basis-2/3 
-    dark:bg-gray-900 bg-white"
+    dark:bg-gray-900 bg-white flex flex-col"
     >
+      <div className="flex flex-row justify-between dark:text-white p-4">
+        <Select>
+          <SelectTrigger className="w-[180px]"></SelectTrigger>
+          <SelectContent>
+            <SelectItem value="light">
+              <SelectItemText>{icon}</SelectItemText>
+            </SelectItem>
+            <SelectItem value="dark"></SelectItem>
+            <SelectItem value="system"></SelectItem>
+          </SelectContent>
+        </Select>
+
+        <h1>radiogroup</h1>
+      </div>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           id="chart"
