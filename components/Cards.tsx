@@ -4,7 +4,7 @@ import { topCardList } from '@/lib/data'
 
 const Cards = () => {
   return (
-    <div className="flex sm:flex-row flex-col gap-2 p-2">
+    <div className="flex sm:flex-row flex-col gap-2 p-2 ml-2">
       {topCardList.map((item, index) => (
         <React.Fragment key={index}>
           <BalanceCard {...item} />

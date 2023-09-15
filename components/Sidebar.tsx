@@ -1,17 +1,30 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
 import { DashboardIcon } from '@radix-ui/react-icons'
 import { Button, buttonVariants } from '@/components/ui/button'
 import Image from 'next/image'
 import Logo from '@/public/Logo.png'
+import LogoDark from '@/public/logo-dark.png'
 import { Separator } from './ui/separator'
 import { sideBarButtons } from '@/lib/data'
+import { useTheme } from '@/context/theme-context'
 
 const Sidebar = () => {
+  const { theme } = useTheme()
+
   return (
-    <div className="h-screen p-4 bg-white sm:w-1/6 hidden sm:block">
+    <div
+      className="h-screen p-4 sm:w-1/6 hidden sm:block dark:text-white 
+    border border-black/5 dark:border-white/10 dark:bg-gray-900 bg-white"
+    >
       <div className="flex flex-col items-center gap-10">
-        <Image className="mt-10" src={Logo} alt="Logo" />
+        <Image
+          className="mt-10"
+          src={theme === 'light' ? Logo : LogoDark}
+          alt="Logo"
+        />
         {sideBarButtons.map((item, index) => (
           <React.Fragment key={index}>
             <Link

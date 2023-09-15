@@ -21,7 +21,7 @@ const BalanceCard = ({
   units,
 }: BalanceCardProps) => {
   return (
-    <Card className="flex-1">
+    <Card className="flex-1 dark:bg-gray-900 dark:text-white">
       <CardHeader className="flex flex-row justify-start gap-2">
         {icon}
         <CardTitle>{title}</CardTitle>

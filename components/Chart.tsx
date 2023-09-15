@@ -53,7 +53,10 @@ const data = [
 
 const Chart = () => {
   return (
-    <div className="bg-white rounded-lg pt-5  w-full border shadow basis-2/3">
+    <div
+      className="rounded-lg pt-5  w-full shadow basis-2/3 
+    dark:bg-gray-900 bg-white"
+    >
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           id="chart"
