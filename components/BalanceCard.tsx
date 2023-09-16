@@ -41,7 +41,9 @@ const BalanceCard = ({
         </p>
         <p
           className={`${
-            rate > 0 ? 'bg-green-200' : 'bg-red-200'
+            rate > 0
+              ? 'bg-green-200 dark:bg-green-500/20'
+              : 'bg-red-200 dark:bg-red-500/20'
           } rounded-lg p-1`}
         >
           <span className={`${rate > 0 ? 'text-green-500' : 'text-red-500'}`}>
