@@ -7,6 +7,7 @@ import { RxDashboard } from 'react-icons/rx'
 import { RiArrowUpDownLine } from 'react-icons/ri'
 import { GoArrowSwitch, GoPerson } from 'react-icons/go'
 import { IoIosSettings } from 'react-icons/io'
+import { formattedDate } from './utils'
 
 export const topCardList = [
   {
@@ -115,40 +116,32 @@ export const chartData = [
 
 export const historyData = [
   {
-    invoice: 'INV001',
-    paymentStatus: 'Paid',
-    totalAmount: '$250.00',
-    paymentMethod: 'Credit Card',
+    status: 'pending',
+    name: 'Deposit',
+    value: 23738,
+    time: formattedDate(88546),
+    type: 'in',
   },
   {
-    invoice: 'INV002',
-    paymentStatus: 'Pending',
-    totalAmount: '$150.00',
-    paymentMethod: 'PayPal',
+    status: 'done',
+    name: 'BTCUSDT',
+    value: -576,
+    time: formattedDate(8165488546),
+    type: 'out',
   },
   {
-    invoice: 'INV003',
-    paymentStatus: 'Unpaid',
-    totalAmount: '$350.00',
-    paymentMethod: 'Bank Transfer',
+    status: 'done',
+    name: 'DOGEUSDT',
+    value: 3500,
+    time: formattedDate(2315646),
+    type: 'in',
   },
   {
-    invoice: 'INV004',
-    paymentStatus: 'Paid',
-    totalAmount: '$450.00',
-    paymentMethod: 'Credit Card',
-  },
-  {
-    invoice: 'INV005',
-    paymentStatus: 'Paid',
-    totalAmount: '$550.00',
-    paymentMethod: 'PayPal',
-  },
-  {
-    invoice: 'INV006',
-    paymentStatus: 'Pending',
-    totalAmount: '$200.00',
-    paymentMethod: 'Bank Transfer',
+    status: 'done',
+    name: 'FTMUSDT',
+    value: 791,
+    time: formattedDate(81488546),
+    type: 'out',
   },
 ] as const
 
