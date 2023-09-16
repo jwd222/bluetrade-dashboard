@@ -2,64 +2,64 @@ import { Table, TableBody, TableCell, TableRow } from '@/components/ui/table'
 
 const invoices = [
   {
-    invoice: 'INV001',
-    paymentStatus: 'Paid',
-    totalAmount: '$250.00',
-    paymentMethod: 'Credit Card',
+    currToUsdt: 'BTCUSDT',
+    currencyName: 'Bitcoin',
+    currentValue: ' $26,053',
+    percentage: +23.4,
   },
   {
-    invoice: 'INV002',
-    paymentStatus: 'Pending',
-    totalAmount: '$150.00',
-    paymentMethod: 'PayPal',
+    currToUsdt: 'ETHUSDT',
+    currencyName: 'Ethereum',
+    currentValue: '$1670',
+    percentage: -0.3,
   },
   {
-    invoice: 'INV003',
-    paymentStatus: 'Unpaid',
-    totalAmount: '$350.00',
-    paymentMethod: 'Bank Transfer',
+    currToUsdt: 'DOTUSDT',
+    currencyName: 'Polkadot',
+    currentValue: '$4.46',
+    percentage: +0.5,
   },
   {
-    invoice: 'INV004',
-    paymentStatus: 'Paid',
-    totalAmount: '$450.00',
-    paymentMethod: 'Credit Card',
+    currToUsdt: 'SOLUSDT',
+    currencyName: 'Solana',
+    currentValue: '$21.18',
+    percentage: +11.1,
   },
   {
-    invoice: 'INV005',
-    paymentStatus: 'Paid',
-    totalAmount: '$550.00',
-    paymentMethod: 'PayPal',
+    currToUsdt: 'BNBUSDT',
+    currencyName: 'Bianance',
+    currentValue: '$209.13',
+    percentage: -2.6,
   },
   {
-    invoice: 'INV006',
-    paymentStatus: 'Pending',
-    totalAmount: '$200.00',
-    paymentMethod: 'Bank Transfer',
+    currToUsdt: 'ADAUSDT',
+    currencyName: 'Cardano',
+    currentValue: '$0.2666',
+    percentage: -1.03,
   },
   {
-    invoice: 'INV007',
-    paymentStatus: 'Unpaid',
-    totalAmount: '$300.00',
-    paymentMethod: 'Credit Card',
+    currToUsdt: 'TRXUSDT',
+    currencyName: 'TRON',
+    currentValue: '$0.07469',
+    percentage: +6.3,
   },
   {
-    invoice: 'INV007',
-    paymentStatus: 'Unpaid',
-    totalAmount: '$300.00',
-    paymentMethod: 'Credit Card',
+    currToUsdt: 'XRPUSDT',
+    currencyName: 'Ripple',
+    currentValue: '$0.5246',
+    percentage: +0.11,
   },
   {
-    invoice: 'INV007',
-    paymentStatus: 'Unpaid',
-    totalAmount: '$300.00',
-    paymentMethod: 'Credit Card',
+    currToUsdt: 'DAIUSDT',
+    currencyName: 'Dai',
+    currentValue: '$0.9998',
+    percentage: +0.41,
   },
   {
-    invoice: 'INV007',
-    paymentStatus: 'Unpaid',
-    totalAmount: '$300.00',
-    paymentMethod: 'Credit Card',
+    currToUsdt: 'DOGEUSDT',
+    currencyName: 'Dogecoin',
+    currentValue: '$0.06248',
+    percentage: -5.16,
   },
 ]
 
@@ -67,14 +67,30 @@ const MarketTable = () => {
   return (
     <Table>
       <TableBody>
-        {invoices.map((invoice) => (
-          <TableRow key={invoice.invoice}>
-            <TableCell className="font-medium">{invoice.invoice}</TableCell>
-            <TableCell>{invoice.paymentStatus}</TableCell>
-            <TableCell>{invoice.paymentMethod}</TableCell>
-            <TableCell className="text-right">{invoice.totalAmount}</TableCell>
-          </TableRow>
-        ))}
+        {invoices.map(
+          ({ currToUsdt, currencyName, currentValue, percentage }, index) => (
+            <TableRow className="rounded-lg" key={index}>
+              <TableCell className="font-medium">{currToUsdt}</TableCell>
+              <TableCell>{currencyName}</TableCell>
+              <TableCell className="text-right">{currentValue}</TableCell>
+              <TableCell
+                className={`${
+                  percentage > 0
+                    ? 'bg-green-200 dark:bg-green-500/20'
+                    : 'bg-red-200 dark:bg-red-500/20'
+                } rounded-lg text-center scale-75`}
+              >
+                <span
+                  className={`${
+                    percentage > 0 ? 'text-green-500' : 'text-red-500'
+                  }`}
+                >
+                  {percentage}%
+                </span>
+              </TableCell>
+            </TableRow>
+          )
+        )}
       </TableBody>
     </Table>
   )

@@ -8,9 +8,11 @@ const Market = () => {
       className="rounded-lg flex flex-col  shadow basis-1/3 
     dark:text-white dark:bg-gray-900 bg-white"
     >
-      <h2 className="p-2">Market</h2>
-      <ScrollArea className="h-60 rounded-md ">
-        <div className="p-4">
+      <div className="flex flex-row p-3">
+        <h2 className="p-2">Market</h2>
+      </div>
+      <ScrollArea className="h-60 rounded-lg ">
+        <div className="px-2 rounded-lg">
           <MarketTable />
         </div>
       </ScrollArea>
