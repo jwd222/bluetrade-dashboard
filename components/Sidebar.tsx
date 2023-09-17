@@ -1,15 +1,15 @@
 'use client'
 
 import React from 'react'
-
 import Image from 'next/image'
-import Logo from '@/public/logo.png'
-import LogoDark from '@/public/logoDark.png'
 import { Separator } from './ui/separator'
 import { sideBarButtons } from '@/lib/data'
 import { useTheme } from '@/context/theme-context'
 import SidebarButton from './SidebarButtons'
 import { useExpanded } from '@/context/sidebar-expanded-context'
+
+import Logo from '@/public/logo.png'
+import LogoDark from '@/public/logoDark.png'
 
 const Sidebar = () => {
   const { theme } = useTheme()
