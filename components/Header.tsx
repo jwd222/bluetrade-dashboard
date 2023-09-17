@@ -11,7 +11,9 @@ import {
 import { IoMdNotificationsOutline } from 'react-icons/io'
 import { Button } from './ui/button'
 import { useExpanded } from '@/context/sidebar-expanded-context'
-import { ChevronFirst, ChevronLast } from 'lucide-react'
+import { ChevronFirst, ChevronLast, MoreVertical } from 'lucide-react'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import profileIng from '@/public/profile.png'
 
 const Header = () => {
   const { expanded, toggleExpanded } = useExpanded()
@@ -29,7 +31,7 @@ const Header = () => {
         {expanded ? <ChevronFirst /> : <ChevronLast />}
       </Button>
       <Input
-        className="basis-1/3 rounded-full"
+        className="basis-1/3 rounded-full dark:border-b-gray-800"
         type="search"
         placeholder="Search..."
       />
@@ -53,7 +55,24 @@ const Header = () => {
           You have no notifications
         </PopoverContent>
       </Popover>
-      <h2>Welcome, back</h2>
+      <div
+        className={`
+              flex justify-between items-center
+              overflow-hidden transition-all w-60 ml-3`}
+      >
+        <Avatar>
+          <AvatarImage
+            src="https://shah-jawad-islam-portfolio.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdp.cc12b37a.png&w=256&q=95"
+            alt="Profile picture"
+          />
+          <AvatarFallback>J</AvatarFallback>
+        </Avatar>
+        <div className="leading-4">
+          <h4 className="font-semibold">Shah Jawad Islam</h4>
+          <span className="text-xs text-gray-600">shahjawad@iut-dhaka.edu</span>
+        </div>
+        <MoreVertical size={20} />
+      </div>
     </div>
   )
 }
