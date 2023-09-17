@@ -1,47 +1,49 @@
 'use client'
 
 import React from 'react'
-import Link from 'next/link'
-import { Button, buttonVariants } from '@/components/ui/button'
+
 import Image from 'next/image'
-import Logo from '@/public/Logo.png'
-import LogoDark from '@/public/Logo-dark.png'
+import Logo from '@/public/logo.png'
+import LogoDark from '@/public/logoDark.png'
 import { Separator } from './ui/separator'
 import { sideBarButtons } from '@/lib/data'
 import { useTheme } from '@/context/theme-context'
+import SidebarButton from './SidebarButtons'
+import { useExpanded } from '@/context/sidebar-expanded-context'
 
 const Sidebar = () => {
   const { theme } = useTheme()
+  const { expanded, toggleExpanded } = useExpanded()
 
   return (
-    <div
-      className="h-screen p-4 sm:w-1/6 hidden sm:block dark:text-white 
-    border border-black/5 dark:border-white/10 dark:bg-gray-900 bg-white"
-    >
-      <div className="flex flex-col items-center gap-10">
-        <Image
-          className="mt-10"
-          src={theme === 'light' ? Logo : LogoDark}
-          alt="Logo"
-        />
-        {sideBarButtons.map(({ title, icon }, index) => (
+    <aside className="h-screen ">
+      <div
+        className="h-full flex flex-col border-r shadow-sm dark:text-white 
+        border border-black/5 dark:border-white/10 dark:bg-gray-900 bg-white p-4 gap-8"
+      >
+        <div className="p-4 pb-2 flex justify-between items-center ">
+          <Image
+            src={theme === 'light' ? Logo : LogoDark}
+            className={`overflow-hidden transition-all scale-125 ${
+              expanded ? 'w-32' : 'w-0'
+            }`}
+            alt=""
+          />
+        </div>
+        {sideBarButtons.slice(0, 5).map(({ title, icon }, index) => (
           <React.Fragment key={index}>
-            <Link
-              href={'/'}
-              className={`${buttonVariants({
-                variant: 'outline',
-              })} w-[80%] hover:bg-blue-100 hover:text-blue-600 
-              dark:shadow-white/5 dark:hover:bg-blue-100/10 gap-4`}
-            >
-              {icon}
-              {title}
-            </Link>
+            <SidebarButton title={title} icon={icon} />
           </React.Fragment>
         ))}
         <Separator className="border border-black/10 dark:border-white/10" />
+        {sideBarButtons.slice(-2).map(({ title, icon }, index) => (
+          <React.Fragment key={index}>
+            <SidebarButton title={title} icon={icon} />
+          </React.Fragment>
+        ))}
       </div>
-      {}
-    </div>
+    </aside>
   )
 }
+
 export default Sidebar

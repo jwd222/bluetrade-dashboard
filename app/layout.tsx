@@ -1,8 +1,8 @@
 import '../styles/globals.css'
 import { Inter } from 'next/font/google'
 import Sidebar from '@/components/Sidebar'
-import ThemeSwitch from '@/components/ThemeSwitch'
 import { ThemeContextProvider } from '@/context/theme-context'
+import { SidebarContextProvider } from '@/context/sidebar-expanded-context'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,11 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} flex flex-row dark:bg-black bg-gray-100 w-full`}
+        className={`${inter.className} flex flex-row dark:bg-black bg-gray-100 w-full flex-initial`}
       >
         <ThemeContextProvider>
-          <Sidebar />
-          {children}
+          <SidebarContextProvider>
+            <Sidebar />
+            {children}
+          </SidebarContextProvider>
         </ThemeContextProvider>
       </body>
     </html>
