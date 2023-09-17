@@ -1,6 +1,4 @@
 'use client'
-
-import React from 'react'
 import { LineChart, Line, ResponsiveContainer } from 'recharts'
 import { tinyChartData } from '@/lib/data'
 
