@@ -22,8 +22,8 @@ const COLORS = ['#55b0ff', '#00d9ff', '#0026fc']
 const Asset = () => {
   return (
     <div
-      className="rounded-lg p-8 shadow justify-center basis-1/4
-    dark:bg-gray-900 bg-white items-center flex flex-col"
+      className="rounded-lg p-8 shadow justify-center w-[25%]
+    dark:bg-gray-900 bg-white items-center flex flex-col flex-auto"
     >
       <div className="flex flex-row justify-between w-full">
         <h1 className="text-lg dark:text-white justify-start">Assets</h1>

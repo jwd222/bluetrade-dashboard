@@ -6,8 +6,8 @@ import { BiUpArrowAlt, BiDownArrowAlt } from 'react-icons/bi'
 const History = () => {
   return (
     <div
-      className="rounded-lg flex flex-col shadow basis-2/4
-    dark:text-white dark:bg-gray-900 bg-white px-2 pt-2"
+      className="rounded-lg flex flex-col shadow w-[45%]
+    dark:text-white dark:bg-gray-900 bg-white px-2 pt-2 flex-auto"
     >
       <div className="flex flex-row justify-between w-full px-4 pt-2">
         <h1 className="text-lg dark:text-white justify-start">History</h1>

@@ -54,8 +54,8 @@ const Converter = () => {
   return (
     <div
       className="flex flex-col items-start bg-white 
-      dark:bg-gray-900 rounded-lg basis-1/4
-    shadow p-8 gap-5"
+      dark:bg-gray-900 rounded-lg w-[30%]
+    shadow p-8 gap-5 flex-auto"
     >
       <div className="flex flex-row justify-between w-full">
         <h1 className="text-lg dark:text-white">Convert</h1>
@@ -108,7 +108,7 @@ const Converter = () => {
       <Button className="w-full" onClick={handleConvert}>
         Convert now
       </Button>
-      <p className=" p-0 text-xs dark:text-white">
+      <p className="p-0 dark:text-white">
         The ultimate price and output is determined by the amount of tokens in
         the pool at the time of your swap.
       </p>
