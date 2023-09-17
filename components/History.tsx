@@ -7,9 +7,9 @@ const History = () => {
   return (
     <div
       className="rounded-lg flex flex-col shadow w-[45%]
-    dark:text-white dark:bg-gray-900 bg-white px-2 pt-2 flex-auto"
+    dark:text-white dark:bg-gray-900 bg-white p-8 flex-auto justify-between"
     >
-      <div className="flex flex-row justify-between w-full px-4 pt-2">
+      <div className="flex flex-row justify-between w-full flex-auto">
         <h1 className="text-lg dark:text-white justify-start">History</h1>
         <Button
           className="dark:bg-gray-950 dark:text-white/30 text-xs 

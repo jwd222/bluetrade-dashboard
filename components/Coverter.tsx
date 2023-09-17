@@ -67,7 +67,7 @@ const Converter = () => {
           <BiDotsHorizontalRounded />
         </Button>
       </div>
-      <div className="flex w-full max-w-sm items-center space-x-2">
+      <div className="flex w-full items-center space-x-2">
         <Input
           className="dark:bg-black border dark:border-white/30 
           border-black/30 dark:text-white"
@@ -86,7 +86,7 @@ const Converter = () => {
           </SelectContent>
         </Select>
       </div>
-      <div className="flex w-full max-w-sm items-center space-x-2">
+      <div className="flex w-full items-center space-x-2">
         <Input
           className="dark:bg-black border dark:border-white/30 
           border-black/30 dark:text-white"
@@ -108,7 +108,7 @@ const Converter = () => {
       <Button className="w-full" onClick={handleConvert}>
         Convert now
       </Button>
-      <p className="p-0 dark:text-white">
+      <p className="p-0 text-[60%] dark:text-white">
         The ultimate price and output is determined by the amount of tokens in
         the pool at the time of your swap.
       </p>
