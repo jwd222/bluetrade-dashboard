@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export function formattedDate(milliseconds: number): string {
+export const formattedDate = (milliseconds: number): string => {
   const date = new Date(milliseconds)
 
   const options = {

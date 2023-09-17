@@ -34,7 +34,7 @@ const SidebarContextProvider = ({ children }: SidebarContextProviderProps) => {
 const useExpanded = () => {
   const context = useContext(SidebarContext)
   if (context === null) {
-    throw new Error('useTheme must be used within a ThemeContextProvider')
+    throw new Error('useExpanded must be used within a SidebarContextProvider')
   }
 
   return context
