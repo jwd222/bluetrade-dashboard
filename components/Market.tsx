@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 const Market = () => {
   return (
     <div
-      className="rounded-lg flex flex-col  shadow basis-1/3 
+      className="rounded-lg flex flex-col flex-auto shadow w-1/3 
     dark:text-white dark:bg-gray-900 bg-white"
     >
       <div className="flex flex-row p-3">

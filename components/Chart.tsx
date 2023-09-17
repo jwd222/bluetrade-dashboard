@@ -33,8 +33,8 @@ const { title, icon } = sideBarButtons[0]
 const Chart = () => {
   return (
     <div
-      className="rounded-lg pt-5  w-full shadow basis-2/3 
-    dark:bg-gray-900 bg-white flex flex-col"
+      className="rounded-lg pt-5 shadow w-2/3 
+    dark:bg-gray-900 bg-white flex flex-col flex-auto"
     >
       <div className="flex flex-row justify-between dark:text-white p-4">
         <h1>dropdown</h1>
