@@ -9,13 +9,25 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover'
 import { IoMdNotificationsOutline } from 'react-icons/io'
+import { Button } from './ui/button'
+import { useExpanded } from '@/context/sidebar-expanded-context'
+import { ChevronFirst, ChevronLast } from 'lucide-react'
 
 const Header = () => {
+  const { expanded, toggleExpanded } = useExpanded()
+
   return (
     <div
       className="flex flex-row justify-between dark:bg-gray-900 
     dark:text-white bg-white w-full p-4 items-center"
     >
+      <Button
+        onClick={toggleExpanded}
+        className="p-1.5 rounded-lg bg-gray-50 text-black 
+        hover:bg-gray-100 dark:text-white dark:bg-black hover:scale-110 transition-all"
+      >
+        {expanded ? <ChevronFirst /> : <ChevronLast />}
+      </Button>
       <Input
         className="basis-1/3 rounded-full"
         type="search"
