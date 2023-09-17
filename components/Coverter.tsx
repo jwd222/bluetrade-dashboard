@@ -20,11 +20,9 @@ const Converter = () => {
   const [toSelect, setToSelect] = useState<string | ''>('BTC')
 
   const fromHandleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(convertFrom)
     setConvertFrom(Number(e.target.value))
   }
   const toHandleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(convertTo)
     setConvertTo(Number(e.target.value))
   }
 
