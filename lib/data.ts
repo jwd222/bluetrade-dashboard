@@ -8,6 +8,7 @@ import { RiArrowUpDownLine } from 'react-icons/ri'
 import { GoArrowSwitch, GoPerson } from 'react-icons/go'
 import { IoIosSettings } from 'react-icons/io'
 import { formattedDate } from './utils'
+import { FiHelpCircle, FiLogOut } from 'react-icons/fi'
 
 export const topCardList = [
   {
@@ -72,6 +73,14 @@ export const sideBarButtons = [
   {
     title: 'Settings',
     icon: React.createElement(IoIosSettings),
+  },
+  {
+    title: 'Help',
+    icon: React.createElement(FiHelpCircle),
+  },
+  {
+    title: 'Log Out',
+    icon: React.createElement(FiLogOut),
   },
 ] as const
 
