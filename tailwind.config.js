@@ -72,6 +72,11 @@ module.exports = {
       },
     },
   },
+  screens: {
+    xs: { max: '600px' },
+    sm: { min: '640px' },
+  },
+
   plugins: [require('tailwindcss-animate')],
   mode: 'jit',
   darkMode: 'class',
