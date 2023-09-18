@@ -53,6 +53,27 @@ export const topCardList = [
   },
 ] as const
 
+export const optionList = [
+  {
+    title: 'BTCUSDT',
+    description: 'Bitcoin',
+    content: '$23,738',
+    rate: 14.67,
+  },
+  {
+    title: 'ETHUSDT',
+    description: 'Etherium',
+    content: '$23,738',
+    rate: 24.86,
+  },
+  {
+    title: 'SOLUSDT',
+    description: 'Solana',
+    content: '$23,738',
+    rate: 64.11,
+  },
+]
+
 export const sideBarButtons = [
   {
     title: 'Dashboard',
