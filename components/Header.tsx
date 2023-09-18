@@ -26,27 +26,28 @@ const Header = () => {
       <Button
         onClick={toggleExpanded}
         className="p-1.5 rounded-lg bg-gray-50 text-black 
-        hover:bg-gray-100 dark:text-white dark:bg-black hover:scale-110 transition-all"
+        hover:bg-gray-50 dark:text-white dark:bg-black hover:scale-110 
+        transition-all"
       >
         {expanded ? <ChevronFirst /> : <ChevronLast />}
       </Button>
       <Input
-        className="basis-1/3 rounded-full dark:border-b-gray-800"
+        className="basis-1/3 rounded-full dark:border-white/10"
         type="search"
         placeholder="Search..."
       />
       <ThemeSwitch />
       <Popover>
         <PopoverTrigger asChild>
-          <button
+          <Button
             className="bg-white 
     w-[2.5rem] h-[2.5rem] bg-opacity-80 backdrop:blur-[0.5rem] border
     border-black/5 dark:border-white/10 shadow-2xl rounded-full
-     flex items-center justify-center hover:scale-[1.15] 
+     flex items-center justify-center hover:scale-[1.15] hover:bg-white
      active:scale-105 transition-all dark:bg-gray-950 dark:text-white"
           >
-            <IoMdNotificationsOutline />
-          </button>
+            <IoMdNotificationsOutline className="text-black dark:text-white scale-[4]" />
+          </Button>
         </PopoverTrigger>
         <PopoverContent
           className="text-center dark:bg-gray-950 
@@ -67,11 +68,15 @@ const Header = () => {
           />
           <AvatarFallback>J</AvatarFallback>
         </Avatar>
-        <div className="leading-4">
-          <h4 className="font-semibold">Shah Jawad Islam</h4>
-          <span className="text-xs text-gray-600">shahjawad@iut-dhaka.edu</span>
+        <div className="sm:flex hidden ">
+          <div className=" leading-4">
+            <h4 className="font-semibold">Shah Jawad Islam</h4>
+            <span className="text-xs text-gray-600">
+              shahjawad@iut-dhaka.edu
+            </span>
+          </div>
+          <MoreVertical size={20} />
         </div>
-        <MoreVertical size={20} />
       </div>
     </div>
   )
