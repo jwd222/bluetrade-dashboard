@@ -5,13 +5,11 @@ import {
   Line,
   XAxis,
   YAxis,
-  CartesianGrid,
-  Tooltip,
   Legend,
   ResponsiveContainer,
 } from 'recharts'
 import { chartData } from '@/lib/data'
-import CustomSelect from './CustomSelect'
+// import CustomSelect from './CustomSelect'
 import {
   Select,
   SelectContent,
@@ -21,7 +19,7 @@ import {
 } from '@/components/ui/select'
 
 // import { optionList } from '@/lib/data'
-import { useState } from 'react'
+// import { useState } from 'react'
 
 // const options = [
 //   { value: 'option1', label: 'Option 1' },
