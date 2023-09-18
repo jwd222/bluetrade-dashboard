@@ -17,44 +17,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
+import ChartSelectItem from './ChartSelectItem'
 
-// import { optionList } from '@/lib/data'
-// import { useState } from 'react'
+import { optionList } from '@/lib/data'
 
-// const options = [
-//   { value: 'option1', label: 'Option 1' },
-//   { value: 'option2', label: 'Option 2' },
-//   { value: 'option3', label: 'Option 3' },
-// ]
-
-const options = [
-  {
-    title: 'BTCUSDT',
-    description: 'Bitcoin',
-    content: '$23,738',
-    rate: 14.67,
-  },
-  {
-    title: 'ETHUSDT',
-    description: 'Etherium',
-    content: '$23,738',
-    rate: 24.86,
-  },
-  {
-    title: 'SOLUSDT',
-    description: 'Solana',
-    content: '$23,738',
-    rate: 64.11,
-  },
-]
-
-type Options = (typeof options)[number]
+export type Options = (typeof optionList)[number]
 
 const Chart = () => {
-  // const [val, setVal] = useState<Options>({
-  //   value: 'option1',
-  //   label: 'Option 1',
-  // })
   return (
     <div
       className="rounded-lg shadow sm:w-2/3 w-full 
@@ -67,29 +36,14 @@ const Chart = () => {
             <SelectValue className="bg-blue-500" placeholder="Theme" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="light">
-              <div className="flex flex-row">
-                <div className="flex flex-col">
-                  '<h1>BTCUSDT</h1>
-                  <h1>Bitcoin</h1>'
-                </div>
-                <div className="flex flex-col">
-                  '<h1>$23,738</h1>
-                  <h1>14.67</h1>'
-                </div>
-              </div>
+            <SelectItem value="Bitcoin">
+              <ChartSelectItem {...optionList[0]} />
             </SelectItem>
-            <SelectItem value="dark">
-              <div>
-                <h1>firasdasdst</h1>
-                <h1>secodasdaand</h1>
-              </div>
+            <SelectItem value="Etherium">
+              <ChartSelectItem {...optionList[1]} />
             </SelectItem>
-            <SelectItem value="system">
-              <div>
-                <h1>firasdadasdasddasdst</h1>
-                <h1>secodasasdasdasdaddaand</h1>
-              </div>
+            <SelectItem value="Solana">
+              <ChartSelectItem {...optionList[2]} />
             </SelectItem>
           </SelectContent>
         </Select>
