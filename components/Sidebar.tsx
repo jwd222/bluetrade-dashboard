@@ -13,10 +13,10 @@ import LogoDark from '@/public/logoDark.png'
 
 const Sidebar = () => {
   const { theme } = useTheme()
-  const { expanded, toggleExpanded } = useExpanded()
+  const { expanded } = useExpanded()
 
   return (
-    <aside className="h-screen ">
+    <aside className="h-screen sm:block hidden">
       <div
         className="h-full flex flex-col border-r shadow-sm dark:text-white 
         border border-black/5 dark:border-white/10 dark:bg-gray-900 bg-white p-4 gap-8"
