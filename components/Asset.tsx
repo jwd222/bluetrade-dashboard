@@ -22,8 +22,8 @@ const COLORS = ['#55b0ff', '#00d9ff', '#0026fc']
 const Asset = () => {
   return (
     <div
-      className="rounded-lg p-8 shadow justify-center w-[25%]
-    dark:bg-gray-900 bg-white items-center flex flex-col flex-auto"
+      className="rounded-lg p-8 shadow justify-center sm:w-[25%] w-fit
+    dark:bg-gray-900 bg-white items-center flex flex-col sm:flex-auto"
     >
       <div className="flex flex-row justify-between w-full">
         <h1 className="text-lg dark:text-white justify-start">Assets</h1>
@@ -36,7 +36,7 @@ const Asset = () => {
         </Button>
       </div>
       <ResponsiveContainer width="100%" height="100%">
-        <PieChart className="scale-125 w-1/2 h-1/2">
+        <PieChart className="sm:scale-125 scale-50 w-1/2 h-1/2">
           <Pie
             data={data2}
             startAngle={265}

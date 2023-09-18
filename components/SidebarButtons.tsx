@@ -29,7 +29,7 @@ const SidebarButton = ({ title, icon }: SidebarButton) => {
       </span>
       {!expanded && (
         <div
-          className={`absolute left-full rounded-md px-2 py-1 ml-6 bg-white
+          className={`absolute z-40 left-full rounded-md px-2 py-1 ml-6 bg-white
           dark:bg-gray-950 hover:bg-blue-100 dark:hover:bg-black 
           text-sm invisible opacity-20 -translate-x-3 transition-all 
           group-hover:visible group-hover:opacity-100 group-hover:translate-x-0

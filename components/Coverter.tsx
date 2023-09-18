@@ -54,7 +54,7 @@ const Converter = () => {
   return (
     <div
       className="flex flex-col items-start bg-white 
-      dark:bg-gray-900 rounded-lg w-[30%]
+      dark:bg-gray-900 rounded-lg sm:w-[30%] w-full
     shadow p-8 gap-5 flex-auto"
     >
       <div className="flex flex-row justify-between w-full">

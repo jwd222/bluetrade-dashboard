@@ -8,14 +8,14 @@ import Market from '@/components/Market'
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen w-full">
+    <div className="flex flex-col w-full">
       <Header />
       <Cards />
-      <div className="p-4 pt-1 flex sm:flex-row gap-2 justify-between">
+      <div className="p-4 pt-1 flex sm:flex-row flex-col gap-2 justify-between w-full">
         <Chart />
         <Market />
       </div>
-      <div className="p-4 pt-1 flex sm:flex-row gap-2 justify-between">
+      <div className="p-4 pt-1 flex sm:flex-row flex-col gap-2 justify-between">
         <Asset />
         <Converter />
         <History />
