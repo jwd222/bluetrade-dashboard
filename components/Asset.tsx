@@ -1,5 +1,6 @@
 'use client'
 
+// import PieChart from './PieChart'
 import {
   PieChart,
   Pie,
@@ -69,7 +70,7 @@ const Asset = () => {
           </Pie>
         </PieChart>
       </ResponsiveContainer>
-      <div></div>
+      {/* <PieChart /> */}
     </div>
   )
 }

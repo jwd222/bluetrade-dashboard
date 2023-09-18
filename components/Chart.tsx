@@ -1,16 +1,6 @@
 'use client'
 
 import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Legend,
-  ResponsiveContainer,
-} from 'recharts'
-import { chartData } from '@/lib/data'
-// import CustomSelect from './CustomSelect'
-import {
   Select,
   SelectContent,
   SelectItem,
@@ -20,6 +10,7 @@ import {
 import ChartSelectItem from './ChartSelectItem'
 
 import { optionList } from '@/lib/data'
+import BoxChart from './BoxChart'
 
 export type Options = (typeof optionList)[number]
 
@@ -49,7 +40,7 @@ const Chart = () => {
         </Select>
         <h1>radiogroup</h1>
       </div>
-      <ResponsiveContainer width="100%" height="100%">
+      {/* <ResponsiveContainer width="100%" height="100%">
         <LineChart
           id="chart"
           data={chartData}
@@ -62,7 +53,7 @@ const Chart = () => {
         >
           <XAxis dataKey="name" />
           <YAxis />
-          {/* <Tooltip /> */}
+          <Tooltip />
           <Legend />
           <Line
             type="monotone"
@@ -71,7 +62,8 @@ const Chart = () => {
             activeDot={{ r: 8 }}
           />
         </LineChart>
-      </ResponsiveContainer>
+      </ResponsiveContainer> */}
+      <BoxChart />
     </div>
   )
 }
