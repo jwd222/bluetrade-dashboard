@@ -8,7 +8,7 @@ import { useTheme } from '@/context/theme-context'
 import SidebarButton from './SidebarButtons'
 import { useExpanded } from '@/context/sidebar-expanded-context'
 
-import Logo from '@/public/logo.png'
+import Logo from '@/public/Logo.png'
 import LogoDark from '@/public/logoDark.png'
 
 const Sidebar = () => {
