@@ -32,7 +32,7 @@ const Header = () => {
         {expanded ? <ChevronFirst /> : <ChevronLast />}
       </Button>
       <Input
-        className="basis-1/3 rounded-full dark:border-white/10"
+        className="basis-1/3 rounded-full dark:border-white/10 dark:bg-black dark:text-white"
         type="search"
         placeholder="Search..."
       />
